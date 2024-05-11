@@ -1,0 +1,30 @@
+Examples room 1:
+
+- TemperatureSensor1 getTemperature
+- TemperatureSensor1 setTemperature 10.5
+- TemperatureSensor1 getTemperatureSensorLimits
+- TemperatureSensor1 setTemperatureLimits -10 10
+
+- Fridge1 [same as above]
+
+- FreezerWithIceCubeMaker1 getCubesMakerCapacity
+- FreezerWithIceCubeMaker1 getCubesQuantity
+- FreezerWithIceCubeMaker1 takeIceCubes 10
+- FreezerWithIceCubeMaker1 makeIceCubes 5
+
+- FridgeWithShoppingList1 getShoppingList
+- FridgeWithShoppingList1 addShoppingListProductRecord milk 500 ml
+- FridgeWithShoppingList1 removeShoppingListProductRecord 1
+- FridgeWithShoppingList1 clearShoppingList
+
+- LightBulb1 getBrightness
+- LightBulb1 setBrightness 75
+- LightBulbLED1 getColour
+- LightBulbLED1 setLedColour RED
+
+Every device:
+- [Device] getMode
+- [Device] setMode ON
+- [Device] setMode OFF
+
+- quit
