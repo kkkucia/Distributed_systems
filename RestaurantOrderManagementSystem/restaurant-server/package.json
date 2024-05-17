@@ -1,0 +1,13 @@
+{
+  "name": "restaurant-server",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "dependencies": {
+    "@grpc/grpc-js": "^1.10.6",
+    "grpc-tools": "^1.12.4",
+    "google-protobuf": "^3.19.4",
+    "grpc-web": "^1.5.0",
+    "protobufjs": "^7.2.6"
+  }
+}

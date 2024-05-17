@@ -1,0 +1,67 @@
+syntax = "proto3";
+
+package restaurant;
+
+message Client {
+    string name = 1;
+    string email = 2;
+    string address = 3;
+}
+
+enum StatusType {
+    ORDERED = 0;
+    IN_PROGRESS = 1;
+    READY = 2;
+    COMPLETED = 3;
+}
+
+message OrderRequest {
+    Client client = 1;
+    string dishName = 2;
+    StatusType status = 3;
+    string extras = 4;
+    int32 quantity = 5;
+}
+
+message Order {
+    string orderId = 1;
+    string dishName = 2;
+    StatusType status = 3;
+    string extras = 4;
+    int32 quantity = 5;
+    Client client = 6;
+}
+
+message Orders {
+    Order order = 1;
+}
+
+message UpdateOrderStatusRequest {
+    string orderId = 1;
+    StatusType newStatus = 2;
+}
+
+message MonitorOrderStatusRequest {
+    string orderId = 1;
+}
+
+message OrderStatusUpdate {
+    string orderId = 1;
+    StatusType status = 2;
+}
+
+message Empty {}
+
+
+message MenuResponse {
+    string dishName = 1;
+}
+
+
+service RestaurantService {
+    rpc AddOrder(OrderRequest) returns (Order);
+    rpc GetOrders(Empty) returns (stream Orders);
+    rpc UpdateOrderStatus(UpdateOrderStatusRequest) returns (Order);
+    rpc MonitorOrderStatus(MonitorOrderStatusRequest) returns ( OrderStatusUpdate);
+    rpc GetMenu(Empty) returns (stream MenuResponse);
+}

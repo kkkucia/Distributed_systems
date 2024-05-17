@@ -1,0 +1,38 @@
+body {
+  font-family: Arial, sans-serif;
+}
+
+.container {
+  max-width: 800px;
+  margin: 40px auto;
+ padding: 20px;
+  background-color: #f9f9f9;
+  border: 1px solid #ddd;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+h1, h2 {
+  margin-top: 0;
+}
+
+form {
+  margin-bottom: 20px;
+}
+
+label {
+  margin-bottom: 10px;
+}
+
+input[type="text"], input[type="email"], input[type="number"] {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 20px;
+  border: 1px solid #ccc;
+}
+
+#orders-list, #menu-list {
+  margin-top: 20px;
+  padding: 20px;
+  border: 1px solid #ddd;
+  background-color: #f9f9f9;
+}
